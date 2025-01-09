@@ -1,34 +1,20 @@
 import React from "react";
 import styled from "styled-components";
+import Layout from "../components/layout";
+import { useTranslation } from "react-i18next";
+import './home.css'
 
 const Home = () => {
-  return (
-    <Section>
-      <h1>Welkom op mijn portfolio!</h1>
-      <p>Hier vertel ik iets kort over mezelf.</p>
-    </Section>
-  );
+    const { t } = useTranslation();
+
+    return (
+        <Layout>
+        <section>
+            <h1>{t("welcome")}</h1>
+            <p>{t("aboutMe")}</p>
+        </section>
+        </Layout>   
+    );
 };
-
-const Section = styled.section`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  width: 100vw;
-  background: #f0f0f0;
-  color: #333;
-  text-align: center;
-
-  h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-  }
-
-  p {
-    font-size: 1.2rem;
-  }
-`;
 
 export default Home;
