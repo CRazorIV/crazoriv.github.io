@@ -1,0 +1,43 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: transparent;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #E0E0E0;
+  cursor: pointer;
+}
+
+.menu {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #E0E0E0;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+.nav-item {
+  color: #E0E0E0;
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  text-decoration: underline;
+}

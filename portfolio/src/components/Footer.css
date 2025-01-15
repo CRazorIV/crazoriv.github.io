@@ -1,3 +1,63 @@
-.boeler {
-  text-align: center;
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    padding: 1rem 2rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer-left,
+.footer-middle,
+.footer-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.footer-left {
+    justify-content: flex-start;
+}
+
+.footer-middle {
+    justify-content: center;
+}
+
+.footer-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    max-width: 33%;
+}
+
+.logo {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+.lang-button {
+    background: transparent;
+    border: 2px solid #3C3C5C;
+    color: #E0E0E0;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.lang-button:hover {
+    background-color: #3C3C5C;
 }

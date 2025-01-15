@@ -13,8 +13,8 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: #f0f0f0; /* Optional: Default background */
-  color: #333;
+  background: #1A1A2E; /* Optional: Default background */
+  color: #E0E0E0;
 `;
 
 export default Layout;

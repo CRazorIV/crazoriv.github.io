@@ -1,28 +1,24 @@
-import React from 'react';
 import './Footer.css';
-import { useTranslation } from "react-i18next";
-import "../i18nconfig"; // Zorg ervoor dat je de configuratie van i18next importeert
 
 const Footer = () => {
-
-    const { i18n } = useTranslation();
-
-    const changeLanguage = (lang) => {
-      i18n.changeLanguage(lang); // Verander de taal
-    };
-
     return (
         <footer className="footer">
-            <h2 className='boeler'>&copy; 2025 All rights reserved.</h2>
-            <button onClick={() => changeLanguage("nl")} aria-label="Nederlands">
-        🇳🇱 {/* Nederlandse vlag */}
-      </button>
-      <button onClick={() => changeLanguage("en")} aria-label="English">
-        🇬🇧 {/* Engelse vlag */}
-      </button>
+            <div className="footer-left">
+                <div className="logo">Your Logo</div>
+            </div>
+
+            <div className="footer-middle">
+                <div className="social-links">
+                    <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                </div>
+            </div>
+
+            <div className="footer-right">
+                {/* Right column is now empty but maintained for layout */}
+            </div>
         </footer>
     );
 };
-
 
 export default Footer;

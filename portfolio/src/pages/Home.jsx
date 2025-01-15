@@ -1,18 +1,13 @@
-import React from "react";
-import styled from "styled-components";
 import Layout from "../components/layout";
-import { useTranslation } from "react-i18next";
 import './home.css'
 
 const Home = () => {
-    const { t } = useTranslation();
 
     return (
         <Layout>
-        <section>
-            <h1>{t("welcome")}</h1>
-            <p>{t("aboutMe")}</p>
-        </section>
+        <section id="home"> <h1>Hero: This takes up the entire screen when the page is loaded</h1> </section>
+        <section id="about"> <h1>There is going to be a image gallery with 4 images on the left sideand text on the right side</h1> </section>
+        <section id="contact"> <h1>Contact: Here there has to be a form with a submit button</h1> </section>
         </Layout>   
     );
 };

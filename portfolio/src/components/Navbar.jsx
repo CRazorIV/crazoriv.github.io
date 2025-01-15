@@ -1,44 +1,25 @@
-import React from "react";
 import { Link } from "react-router-dom";
-import styled from "styled-components";
+import './Navbar.css';
 
 const Navbar = () => {
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    element?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <Nav>
-      <Logo>MijnPortfolio</Logo>
-      <Menu>
-        <Link to="/">Home</Link>
-        <Link to="/about">Over Mij</Link>
+    <nav className="nav">
+      <div className="logo" onClick={() => scrollToSection('home')}>
+        MijnPortfolio
+      </div>
+      
+      <div className="menu">
+        <span className="nav-item" onClick={() => scrollToSection('about')}>Over Mij</span>
         <Link to="/projects">Projecten</Link>
-        <Link to="/contact">Contact</Link>
-      </Menu>
-    </Nav>
+        <span className="nav-item" onClick={() => scrollToSection('contact')}>Contact</span>
+      </div>
+    </nav>
   );
 };
-
-const Nav = styled.nav`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background: #333;
-  color: white;
-`;
-
-const Logo = styled.div`
-  font-size: 1.5rem;
-  font-weight: bold;
-`;
-
-const Menu = styled.div`
-  a {
-    margin: 0 1rem;
-    text-decoration: none;
-    color: white;
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-`;
 
 export default Navbar;
