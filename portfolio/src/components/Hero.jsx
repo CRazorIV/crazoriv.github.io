@@ -1,3 +1,10 @@
+import pythonIcon from '../assets/Frame.png';
+import mysqlIcon from '../assets/Frame(1).png';
+import reactIcon from '../assets/Frame(2).png';
+import jsIcon from '../assets/Frame(3).png';
+import nodeIcon from '../assets/Frame(4).png';
+import phpIcon from '../assets/Frame(5).png';
+import Yuri from '../assets/yuri.png';
 import './Hero.css';
 
 const Hero = () => {
@@ -12,24 +19,23 @@ const Hero = () => {
         
         <div className="hero-image-container">
           <div className="dot-pattern">
-            {/* Create dot pattern grid */}
             {[...Array(15)].map((_, i) => (
               <div key={i} className="dot" />
             ))}
           </div>
           <div className="hero-image">
-            <img src="/path-to-your-image.jpg" alt="Yuri Kuvalja" />
+            <img src={Yuri} alt="Yuri Kuvalja" />
           </div>
         </div>
       </div>
       
       <div className="tech-stack">
-        <img src="/python-logo.png" alt="Python" />
-        <img src="/mysql-logo.png" alt="MySQL" />
-        <img src="/react-logo.png" alt="React" />
-        <img src="/js-logo.png" alt="JavaScript" />
-        <img src="/node-logo.png" alt="Node.js" />
-        <img src="/php-logo.png" alt="PHP" />
+        <img src={pythonIcon} alt="Python" />
+        <img src={mysqlIcon} alt="MySQL" />
+        <img src={reactIcon} alt="React" />
+        <img src={jsIcon} alt="JavaScript" />
+        <img src={nodeIcon} alt="Node.js" />
+        <img src={phpIcon} alt="PHP" />
       </div>
     </section>
   );
