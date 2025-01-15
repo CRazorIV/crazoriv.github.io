@@ -1,0 +1,19 @@
+.custom-button {
+    background-color: transparent;
+    border: 2px solid #3C3C5C;
+    color: #E0E0E0;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.custom-button:hover {
+    background-color: #3C3C5C;
+}
+
+.custom-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(60, 60, 92, 0.3);
+}

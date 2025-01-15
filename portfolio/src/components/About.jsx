@@ -26,8 +26,12 @@ const About = () => {
           <Link to="/projects" className="work-button">See my work</Link>
           
           <div className="dot-pattern">
-            {[...Array(48)].map((_, i) => (
-              <div key={i} className="dot" />
+            {[...Array(3)].map((_, rowIndex) => (
+              <div key={rowIndex} className="dot-row">
+                {[...Array(16)].map((_, dotIndex) => (
+                  <div key={dotIndex} className="dot" />
+                ))}
+              </div>
             ))}
           </div>
         </div>

@@ -1,20 +1,14 @@
 // Layout.js
 import React from "react";
-import styled from "styled-components";
+import PropTypes from 'prop-types';
+import './Layout.css';
 
 const Layout = ({ children }) => {
-  return <Wrapper>{children}</Wrapper>;
+  return <div className="layout-wrapper">{children}</div>;
 };
 
-const Wrapper = styled.div`
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: #1A1A2E; /* Optional: Default background */
-  color: #E0E0E0;
-`;
+Layout.propTypes = {
+  children: PropTypes.node.isRequired
+};
 
 export default Layout;

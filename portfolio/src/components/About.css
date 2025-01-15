@@ -76,9 +76,14 @@
   position: absolute;
   bottom: -3rem;
   right: 0;
-  display: grid;
-  grid-template-columns: repeat(16, 1fr);
-  gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.dot-row {
+  display: flex;
+  gap: 1rem;
 }
 
 .dot {

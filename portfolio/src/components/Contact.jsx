@@ -51,8 +51,6 @@ const Contact = () => {
           <input 
             type="text" 
             name="name"
-            value={formData.name}
-            onChange={handleChange}
             placeholder="First name" 
             className="form-input"
             required
@@ -61,8 +59,6 @@ const Contact = () => {
           <input 
             type="email" 
             name="email"
-            value={formData.email}
-            onChange={handleChange}
             placeholder="Example@mail.com" 
             className="form-input"
             required
@@ -71,23 +67,12 @@ const Contact = () => {
 
         <textarea 
           name="message"
-          value={formData.message}
-          onChange={handleChange}
-          placeholder="Here you can send me a message anything you like" 
+          placeholder="Send me a message about anything you'd like" 
           className="form-textarea"
           required
         />
 
-        <Button type="submit" disabled={status === 'sending'}>
-          {status === 'sending' ? 'Sending...' : 'Send message'}
-        </Button>
-
-        {status === 'success' && (
-          <p className="success-message">Message sent successfully!</p>
-        )}
-        {status === 'error' && (
-          <p className="error-message">Failed to send message. Please try again.</p>
-        )}
+        <Button type="submit">Send message</Button>
       </form>
     </section>
   );
