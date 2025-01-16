@@ -31,6 +31,7 @@ const Contact = () => {
         message: formData.message
       };
       
+
       await emailjs.send(
         'service_0lapaf6',
         'template_ck4ahmm',
