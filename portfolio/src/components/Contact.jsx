@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 import './Contact.css';
 import Button from './Button';
+import toast from 'react-hot-toast';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -12,10 +13,11 @@ const Contact = () => {
   const [status, setStatus] = useState('');
 
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+    const { name, value } = e.target;
+    setFormData(prevState => ({
+        ...prevState,
+        [name]: value
+    }));
   };
 
   const handleSubmit = async (e) => {
@@ -23,21 +25,31 @@ const Contact = () => {
     setStatus('sending');
 
     try {
+      const templateParams = {
+        from_name: formData.name,
+        reply_to: formData.email,
+        message: formData.message
+      };
+      
       await emailjs.send(
-        'YOUR_SERVICE_ID',  // Replace with your EmailJS service ID
-        'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+        'service_0lapaf6',
+        'template_ck4ahmm',
+        templateParams,
         {
-          from_name: formData.name,
-          reply_to: formData.email,
-          message: formData.message
-        },
-        'YOUR_USER_ID'     // Replace with your EmailJS user ID
+          publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+        }
       );
-
-      setStatus('success');
-      setFormData({ name: '', email: '', message: '' });
+      
+      setFormData({
+        name: '',
+        email: '',
+        message: ''
+      });
+      
+      toast.success('Message sent successfully!');
+      
     } catch (error) {
-      setStatus('error');
+      toast.error('Failed to send message. Please try again.');
       console.error('Error sending email:', error);
     }
   };
@@ -54,6 +66,8 @@ const Contact = () => {
             placeholder="First name" 
             className="form-input"
             required
+            value={formData.name}
+            onChange={handleChange}
           />
           
           <input 
@@ -62,6 +76,8 @@ const Contact = () => {
             placeholder="Example@mail.com" 
             className="form-input"
             required
+            value={formData.email}
+            onChange={handleChange}
           />
         </div>
 
@@ -70,6 +86,8 @@ const Contact = () => {
           placeholder="Send me a message about anything you'd like" 
           className="form-textarea"
           required
+          value={formData.message}
+          onChange={handleChange}
         />
 
         <Button type="submit">Send message</Button>
