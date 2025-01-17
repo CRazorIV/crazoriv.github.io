@@ -46,8 +46,34 @@
 
 .hero-image {
   position: relative;
-  border: 2px solid #3C3C5C;
-  padding: 1rem;
+}
+
+.profile-image {
+  position: relative;
+  z-index: 1;
+}
+
+.arrow {
+  position: absolute;
+  z-index: 2;
+}
+
+.blue-arrow {
+  top: -20px;
+  right: -20px;
+  transform: rotate(-45deg);
+}
+
+.green-arrow {
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.purple-arrow {
+  bottom: -20px;
+  right: 30%;
+  transform: rotate(45deg);
 }
 
 .hero-image img {

@@ -6,6 +6,10 @@ import reactIcon from '../assets/Frame(2).png';
 import jsIcon from '../assets/Frame(3).png';
 import nodeIcon from '../assets/Frame(4).png';
 import phpIcon from '../assets/Frame(5).png';
+// Import your arrow SVGs
+import blueArrow from '../assets/blue-arrow.svg';  // Update with your actual file name
+import greenArrow from '../assets/green-arrow.svg'; // Update with your actual file name
+import purpleArrow from '../assets/purple-arrow.svg'; // Update with your actual file name
 
 const Hero = () => {
   return (
@@ -15,20 +19,11 @@ const Hero = () => {
           <div className="hero-text">
             <h1>Hi, my name is</h1>
             <h2>Yuri Kuvalja</h2>
-            <h3>I'm a \programmer</h3>
+            <h3>I'm a programmer</h3>
           </div>
           
           <div className="hero-image">
-            <img src={Yuri} alt="Yuri Kuvalja" />
-            <div className="dot-pattern">
-              {[...Array(12)].map((_, i) => (
-                <div key={i} className="dot" />
-              ))}
-            </div>
-            <div className="curved-lines">
-              <div className="line blue"></div>
-              <div className="line green"></div>
-            </div>
+            <img src={Yuri} alt="Yuri Kuvalja" className="profile-image" />
           </div>
         </div>
 
