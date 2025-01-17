@@ -41,3 +41,15 @@
 .nav-item:hover {
   text-decoration: underline;
 }
+
+@media (max-width: 768px) {
+  .nav {
+    padding: 1rem;
+  }
+
+  .menu {
+    display: none; /* For mobile menu - we can add a hamburger menu later */
+  }
+
+  /* Add mobile menu styles when you want to implement it */
+}

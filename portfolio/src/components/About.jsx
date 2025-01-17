@@ -13,7 +13,6 @@ const About = () => {
             <img src={Yuri} alt="Yuri Kuvalja" className="profile-img" />
             <img src={Yuri} alt="Yuri Kuvalja" className="profile-img" />
           </div>
-          <div className="arrow">↗</div>
         </div>
 
         <div className="about-text">
@@ -24,16 +23,6 @@ const About = () => {
           <p>I'm passionate about bringing ideas to life through my own projects, where I get to challenge myself, apply my skills, and turn creativity into something tangible. Each project is an opportunity to grow, learn, and push the boundaries of what I can achieve!</p>
           
           <Link to="/projects" className="work-button">See my work</Link>
-          
-          <div className="dot-pattern">
-            {[...Array(3)].map((_, rowIndex) => (
-              <div key={rowIndex} className="dot-row">
-                {[...Array(16)].map((_, dotIndex) => (
-                  <div key={dotIndex} className="dot" />
-                ))}
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </section>

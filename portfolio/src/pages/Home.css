@@ -1,16 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .home-container {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 0 auto;
     padding: 0 2rem;
 }
 
 .home-container > section {
-    min-height: 100vh;
+    min-height: 90vh;
     width: 100%;
-    padding: 80px 0;
+    padding: 60px 0;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -25,4 +31,32 @@
 /* Add dark background to full viewport width */
 body {
     background-color: #1A1A2E;
+}
+
+/* Add responsive adjustments */
+@media (max-width: 1024px) {
+    .home-container {
+        padding: 0 2rem;
+    }
+    .home-container > section {
+        padding: 50px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-container {
+        padding: 0 1.5rem;
+    }
+    .home-container > section {
+        padding: 40px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-container {
+        padding: 0 1rem;
+    }
+    .home-container > section {
+        padding: 30px 0;
+    }
 }
