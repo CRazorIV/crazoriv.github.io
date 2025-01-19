@@ -19,7 +19,9 @@
     "react-hot-toast": "^2.5.1",
     "react-i18next": "^15.4.0",
     "react-router-dom": "^7.1.1",
-    "styled-components": "^6.1.14"
+    "react-typed": "^2.0.12",
+    "styled-components": "^6.1.14",
+    "typed.js": "^2.1.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",

@@ -3,27 +3,30 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 80px;
 }
 
 .hero-content {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1600px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 4rem;
+  padding: 0 2rem;
 }
 
 .text-and-image {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 100%;
-  gap: 4rem;
+  gap: 6rem;
 }
 
 .hero-text {
-  text-align: left;
+  flex: 1;
+  max-width: 600px;
 }
 
 .hero-text h1 {
@@ -46,12 +49,16 @@
 }
 
 .hero-image {
-  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  max-width: 500px;
 }
 
 .profile-image {
-  position: relative;
-  z-index: 1;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .arrow {
@@ -125,6 +132,7 @@
 }
 
 .tech-stack {
+  width: 100%;
   display: flex;
   justify-content: center;
   gap: 3rem;
@@ -153,6 +161,38 @@
   background-color: #3C3C5C;
 }
 
+.typed-text {
+  display: inline-block;
+  color: #61DAFB;
+}
+
+.green-text {
+  color: #00FF88;
+}
+
+.purple-text {
+  color: #9C27B0;
+}
+
+.typed-cursor {
+  opacity: 1;
+  animation: blink 0.7s infinite;
+}
+
+.green-cursor {
+  color: #00FF88;
+}
+
+.purple-cursor {
+  color: #9C27B0;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 @media (max-width: 1024px) {
   .hero-content {
     padding: 0 2rem;
@@ -173,21 +213,48 @@
   .tech-stack {
     gap: 2rem;
   }
+
+  .typed-cursor {
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 768px) {
+  .hero {
+    padding-top: 60px;
+  }
+
   .text-and-image {
     flex-direction: column;
     text-align: center;
     gap: 3rem;
   }
 
+  .hero-text, .hero-image {
+    max-width: 100%;
+  }
+
   .hero-text {
     order: 1;
   }
 
-  .hero-image {
-    order: 2;
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-text h2 {
+    font-size: 3.5rem;
+  }
+
+  .hero-text h3 {
+    font-size: 2rem;
+  }
+
+  .typed-cursor {
+    font-size: 2rem;
+  }
+
+  .hero-image img {
     max-width: 80%;
     margin: 0 auto;
   }
@@ -212,8 +279,16 @@
     font-size: 1.75rem;
   }
 
+  .typed-cursor {
+    font-size: 1.75rem;
+  }
+
   .hero-image {
     max-width: 100%;
+  }
+
+  .tech-stack img {
+    height: 40px;
   }
 }
 
