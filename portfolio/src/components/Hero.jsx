@@ -17,7 +17,7 @@ const Hero = () => {
   useEffect(() => {
     const options = {
       strings: [
-        '<span class="green-text">Programmer</span>',
+        '<span class="green-text">Developer</span>',
         '<span class="purple-text">Developer</span>'
       ],
       typeSpeed: 100,
@@ -53,6 +53,9 @@ const Hero = () => {
           
           <div className="hero-image">
             <img src={Yuri} alt="Yuri Kuvalja" className="profile-image" />
+            <img src={blueArrow} alt="" className="arrow blue-arrow-top" />
+            <img src={greenArrow} alt="" className="arrow green-arrow" />
+            <img src={blueArrow} alt="" className="arrow blue-arrow-bottom" />
           </div>
         </div>
 

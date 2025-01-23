@@ -7,7 +7,7 @@ const ProjectCard = ({ title, description, technologies = [], imageUrl, liveUrl 
             <div className="project-content">
                 <h3 className="project-title">{title}</h3>
                 
-                <div className="tech-stack">
+                <div className="project-tech-stack">
                     {technologies?.map((tech, index) => (
                         <img key={index} src={tech} alt={`${tech} icon`} className="tech-icon" />
                     ))}
