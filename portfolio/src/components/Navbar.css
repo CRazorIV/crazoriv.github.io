@@ -25,7 +25,8 @@
 }
 
 /* Clean navbar links with underline effect */
-.menu a:not(.cv-button), .nav-item {
+.menu a:not(.cv-button),
+.nav-item {
   color: #E0E0E0;
   text-decoration: none;
   font-size: 1.1rem;
@@ -34,7 +35,8 @@
   cursor: pointer;
 }
 
-.menu a:not(.cv-button)::after, .nav-item::after {
+.menu a:not(.cv-button)::after,
+.nav-item::after {
   content: '';
   position: absolute;
   width: 100%;
@@ -46,7 +48,8 @@
   transition: transform 0.3s ease;
 }
 
-.menu a:not(.cv-button):hover::after, .nav-item:hover::after {
+.menu a:not(.cv-button):hover::after,
+.nav-item:hover::after {
   transform: scaleX(1);
 }
 
@@ -70,12 +73,40 @@
 /* Hamburger Menu */
 .hamburger {
   display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  z-index: 1001;
+  padding: 15px;
+  margin-right: 10px;
+}
+
+.line {
+  width: 30px;
+  height: 3px;
+  background-color: #E0E0E0;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+/* Updated hamburger animation for better spacing */
+.line.active:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.line.active:nth-child(2) {
+  opacity: 0;
+}
+
+.line.active:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
 }
 
 /* Mobile Styles */
 @media (max-width: 768px) {
   .nav {
-    justify-content: flex-end;
+    padding: 1rem;
+    justify-content: space-between;
   }
 
   .logo {

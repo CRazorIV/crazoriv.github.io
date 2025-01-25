@@ -24,10 +24,15 @@ const Navbar = () => {
     }
   };
 
+  // Add this function to handle regular link clicks
+  const handleLinkClick = () => {
+    setIsOpen(false);
+  };
+
   return (
     <nav className="nav">
-      <Link to="/" className="logo">
-        MyPortfolio
+      <Link to="/" className="logo" onClick={handleLinkClick}>
+        Yuri Kuvalja
       </Link>
       
       <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
@@ -38,9 +43,9 @@ const Navbar = () => {
 
       <div className={`menu ${isOpen ? 'active' : ''}`}>
         <span className="nav-item" onClick={() => scrollToSection('about')}>About Me</span>
-        <Link to="/projects">Projects</Link>
+        <Link to="/projects" onClick={handleLinkClick}>Projects</Link>
         <span className="nav-item" onClick={() => scrollToSection('contact')}>Contact</span>
-        <Link to="/cv" className="cv-button">Download CV</Link>
+        <Link to="/cv" className="cv-button" onClick={handleLinkClick}>Download CV</Link>
       </div>
     </nav>
   );
