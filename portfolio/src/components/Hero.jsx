@@ -12,6 +12,7 @@ import phpIcon from '../assets/Frame(5).png';
 import blueArrow from '../assets/blue-arrow.svg';  // Update with your actual file name
 import greenArrow from '../assets/green-arrow.svg'; // Update with your actual file name
 import purpleArrow from '../assets/purple-arrow.svg'; // Update with your actual file name
+import Button from './Button';  // Add this if not already imported
 
 const Hero = () => {
   useEffect(() => {
@@ -67,6 +68,12 @@ const Hero = () => {
           <img src={nodeIcon} alt="Node.js" />
           <img src={phpIcon} alt="PHP" />
         </div>
+      </div>
+      
+      <div className="cta-container" style={{ marginTop: '2rem', textAlign: 'center' }}>
+        <Button onClick={() => document.getElementById('about').scrollIntoView({ behavior: 'smooth' })}>
+          Learn more about me ↓
+        </Button>
       </div>
     </section>
   );

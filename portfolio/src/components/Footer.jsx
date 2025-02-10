@@ -4,13 +4,13 @@ const Footer = () => {
     return (
         <footer className="footer">
             <div className="footer-left">
-                <div className="logo">Yuri Kuvalja</div>
+                <div className="logo"> &copy; Yuri Kuvalja</div>
             </div>
 
             <div className="footer-middle">
                 <div className="social-links">
-                    <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">GitHub</a>
-                    <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://github.com/CRazorIV" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="https://www.linkedin.com/in/yuri-kuvalja-25595330b/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                 </div>
             </div>
 

@@ -61,7 +61,14 @@ const Navbar = () => {
         <span className="nav-item" onClick={() => scrollToSection('about')}>About Me</span>
         <Link to="/projects" onClick={handleProjectsClick}>Projects</Link>
         <span className="nav-item" onClick={() => scrollToSection('contact')}>Contact</span>
-        <Link to="/cv" className="cv-button" onClick={handleLinkClick}>Download CV</Link>
+        <a 
+          href="/Yuri_Kuvalja_CV.pdf"
+          className="cv-button" 
+          download="Yuri_Kuvalja_CV.pdf"
+          onClick={handleLinkClick}
+        >
+          Download CV
+        </a>
       </div>
     </nav>
   );

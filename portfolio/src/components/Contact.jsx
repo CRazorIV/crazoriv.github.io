@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import './Contact.css';
 import Button from './Button';
@@ -10,7 +10,10 @@ const Contact = () => {
     email: '',
     message: ''
   });
-  const [status, setStatus] = useState('');
+
+  useEffect(() => {
+    emailjs.init("Ac_7enb0vYYfSC6wG");
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -22,7 +25,6 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus('sending');
 
     try {
       const templateParams = {
@@ -35,10 +37,7 @@ const Contact = () => {
       await emailjs.send(
         'service_0lapaf6',
         'template_ck4ahmm',
-        templateParams,
-        {
-          publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
-        }
+        templateParams
       );
       
       setFormData({
