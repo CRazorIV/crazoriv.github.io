@@ -70,10 +70,10 @@ const Hero = () => {
         </div>
       </div>
       
-      <div className="cta-container" style={{ marginTop: '2rem', textAlign: 'center' }}>
-        <Button onClick={() => document.getElementById('about').scrollIntoView({ behavior: 'smooth' })}>
-          Learn more about me ↓
-        </Button>
+      <div className="scroll-indicator" 
+           onClick={() => document.getElementById('about').scrollIntoView({ behavior: 'smooth' })}
+           aria-label="Scroll to About section">
+        ↓↓
       </div>
     </section>
   );
