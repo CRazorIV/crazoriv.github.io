@@ -1,15 +1,17 @@
 import projectImage1 from "../assets/Frame.png";
 import projectImage2 from "../assets/yuri.png";
+import projectImage3 from "../assets/QuizzieScreenshot.png";
 // Import other images as needed
 
 export const projects = [
   {
     id: 1,
-    title: "Sentiment-analysator",
-    image: projectImage1, // Use the imported image
-    problem: "Lorem ipsum dolor amet, consectetuer adipiscing elit...",
+    title: "Quizzie",
+    image: projectImage3, // Use the imported image
+    problem:
+      "The client asked me and my team to make a quiz application like Kahoot.",
     solution: "Lorem ipsum dolor amet, consectetuer adipiscing elit...",
-    technologies: ["Python"],
+    technologies: ["HTML", "CSS", "Javascript"],
     projectUrl: "under development",
   },
   {
