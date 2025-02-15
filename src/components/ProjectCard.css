@@ -29,11 +29,6 @@
   margin-bottom: 2rem;
 }
 
-.project-card .tech-icon {
-  height: 32px;
-  width: auto;
-}
-
 .project-description {
   margin-bottom: 3rem;
   max-width: 800px;
@@ -74,31 +69,63 @@
   align-items: center;
   justify-content: center;
   min-height: 400px;
+  overflow: hidden;
+  border-radius: 0;
+  border: 2px solid #E0E0E0;
+  transition: transform 0.2s ease-out;
+  cursor: default;
+  transform-style: preserve-3d;
+  perspective: 1000px;
 }
 
 .project-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  padding: 1rem;
+  transition: transform 0.2s ease-out;
+  transform-style: preserve-3d;
+}
+
+.project-image:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* For even-numbered cards (right side), rotate the other way */
+.project-card:nth-child(even) .project-image {
+  transform-origin: left center;
+}
+
+.project-card:nth-child(even) .project-image:hover {
+  transform: translateY(-5px) rotate(2deg);
 }
 
 .project-tech-stack {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
   gap: 1.5rem;
-  margin-bottom: 3rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid #3C3C5C;
-  width: 100%;
+  margin: 1.5rem 0;
+  justify-content: center;
 }
 
-.project-tech-stack::after {
-  content: "";
-  display: block;
-  height: 1px;
-  background-color: #3C3C5C;
-  margin: 1.5rem auto;
+.tech-icon {
+  height: 64px;
+  width: auto;
+  transition: transform 0.2s ease;
+}
+
+.tech-icon:hover {
+  transform: scale(1.1);
+}
+
+.tech-tag {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  margin: 0.2rem;
+  display: inline-block;
 }
 
 /* Media Queries */
@@ -123,7 +150,7 @@
   }
 
   .tech-icon {
-    height: 28px;
+    height: 56px;
   }
 
   .tech-stack::after {
@@ -148,6 +175,9 @@
     order: 1;
     /* Move image above content on mobile */
     min-height: 300px;
+    width: 100%;
+    transform: none !important;
+    transition: none;
   }
 
   .project-title {
@@ -162,7 +192,7 @@
   }
 
   .tech-icon {
-    height: 24px;
+    height: 48px;
   }
 
   .project-description {
@@ -196,5 +226,9 @@
 
   .visit-project {
     padding: 0.5rem 1.5rem;
+  }
+
+  .tech-icon {
+    height: 40px;
   }
 }
