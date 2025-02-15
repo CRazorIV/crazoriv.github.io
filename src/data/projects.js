@@ -1,4 +1,3 @@
-import projectImage1 from "../assets/Frame.png";
 import projectImage2 from "../assets/yuri.png";
 import projectImage3 from "../assets/QuizzieScreenshot.png";
 // Import other images as needed
@@ -16,10 +15,10 @@ export const projects = [
   },
   {
     id: 2,
-    title: "E-commerce Platform",
+    title: "Work in progress",
     image: projectImage2, // Use the imported image
-    problem: "Small businesses struggle to establish...",
-    solution: "Developed a user-friendly e-commerce platform...",
+    problem: "There is still a lot of work to do",
+    solution: "So let me keep working on it ;)",
     technologies: ["React", "Node.js", "MongoDB"],
     projectUrl: "https://ecommerce-demo.com",
   },
