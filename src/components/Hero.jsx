@@ -8,11 +8,8 @@ import reactIcon from '../assets/Frame(2).png';
 import jsIcon from '../assets/Frame(3).png';
 import nodeIcon from '../assets/Frame(4).png';
 import phpIcon from '../assets/Frame(5).png';
-// Import your arrow SVGs
-import blueArrow from '../assets/blue-arrow.svg';  // Update with your actual file name
-import greenArrow from '../assets/green-arrow.svg'; // Update with your actual file name
-import purpleArrow from '../assets/purple-arrow.svg'; // Update with your actual file name
-import Button from './Button';  // Add this if not already imported
+import blueArrow from '../assets/blue-arrow.svg';
+import greenArrow from '../assets/green-arrow.svg';
 
 const Hero = () => {
   useEffect(() => {
@@ -48,7 +45,7 @@ const Hero = () => {
             <h1>Hi, my name is</h1>
             <h2>Yuri Kuvalja</h2>
             <h3>
-              I'm a <span className="typed-text"></span>
+              I&apos;m a <span className="typed-text"></span>
             </h3>
           </div>
           
