@@ -62,7 +62,7 @@ const Navbar = () => {
         <Link to="/projects" onClick={handleProjectsClick}>Projects</Link>
         <span className="nav-item" onClick={() => scrollToSection('contact')}>Contact</span>
         <a 
-          href="/Yuri_Kuvalja_CV.pdf"
+          href={`${import.meta.env.BASE_URL}Yuri_Kuvalja_CV.pdf`}
           className="cv-button" 
           download="Yuri_Kuvalja_CV.pdf"
           onClick={handleLinkClick}

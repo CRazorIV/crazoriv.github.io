@@ -69,7 +69,7 @@ const ProjectCard = ({ title, description, technologies = [], imageUrl, liveUrl 
                     </div>
                 </div>
                 
-                <a href={liveUrl} className="visit-project">Visit project</a>
+                <a href={liveUrl} className="visit-project">Currently not available</a>
             </div>
             
             <div 

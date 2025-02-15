@@ -21,7 +21,7 @@ export const projects = [
     problem: "There is still a lot of work to do",
     solution: "So let me keep working on it ;)",
     // technologies: ["React", "Node.js"],
-    projectUrl: "https://ecommerce-demo.com",
+    // projectUrl: "https://ecommerce-demo.com",
   },
   // ... other projects
 ];
