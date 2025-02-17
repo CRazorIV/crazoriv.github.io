@@ -1,63 +1,55 @@
 .footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     background-color: #000000;
-    padding: 1rem 2rem;
+    color: #E0E0E0;
+    padding: 2rem 0;
     width: 100%;
-    box-sizing: border-box;
+    min-height: 100px;
+    margin-top: auto;  /* Push footer to bottom */
 }
 
-.footer-left,
-.footer-middle,
-.footer-right {
-    flex: 1;
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
-}
-
-.footer-left {
-    justify-content: flex-start;
-}
-
-.footer-middle {
-    justify-content: center;
-}
-
-.footer-right {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    max-width: 33%;
-}
-
-.logo {
-    color: white;
-    font-size: 1.5rem;
+    gap: 1.5rem;
 }
 
 .social-links {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
 }
 
-.social-links a {
-    color: white;
-    text-decoration: none;
+.social-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
 }
 
-.social-links a:hover {
-    text-decoration: underline;
+.social-icon:hover {
+    transform: translateY(-3px);
 }
 
-.lang-button {
-    background: transparent;
-    border: 2px solid #3C3C5C;
-    color: #E0E0E0;
-    padding: 8px 16px;
-    cursor: pointer;
+.copyright {
+    font-size: 0.9rem;
+    color: #888;
 }
 
-.lang-button:hover {
-    background-color: #3C3C5C;
+/* Add this to your App.css or index.css */
+#root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 1.5rem 0;
+    }
+    
+    .social-links {
+        gap: 1.5rem;
+    }
 }

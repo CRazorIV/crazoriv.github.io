@@ -1,21 +1,30 @@
 import './Footer.css';
+import githubIcon from '../assets/github.svg';  // Add these icons to your assets
+import linkedinIcon from '../assets/linkedin.svg';
 
 const Footer = () => {
     return (
         <footer className="footer">
-            <div className="footer-left">
-                <div className="logo"> &copy; Yuri Kuvalja</div>
-            </div>
-
-            <div className="footer-middle">
+            <div className="footer-content">
                 <div className="social-links">
-                    <a href="https://github.com/CRazorIV" target="_blank" rel="noopener noreferrer">GitHub</a>
-                    <a href="https://www.linkedin.com/in/yuri-kuvalja-25595330b/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a 
+                        href="https://github.com/crazoriv" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        aria-label="GitHub Profile"
+                    >
+                        <img src={githubIcon} alt="GitHub" className="social-icon" />
+                    </a>
+                    <a 
+                        href="https://www.linkedin.com/in/yuri-kuvalja-25595330b/" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        aria-label="LinkedIn Profile"
+                    >
+                        <img src={linkedinIcon} alt="LinkedIn" className="social-icon" />
+                    </a>
                 </div>
-            </div>
-
-            <div className="footer-right">
-                {/* Right column is now empty but maintained for layout */}
+                <p className="copyright">© 2024 Yuri Kuvalja. All rights reserved.</p>
             </div>
         </footer>
     );
