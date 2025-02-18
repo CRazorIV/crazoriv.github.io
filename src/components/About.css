@@ -1,5 +1,5 @@
 .about {
-  padding: 4rem 2rem;
+  padding: 2rem 2rem;
   background-color: #1A1A2E;
   position: relative;
   opacity: 0;
@@ -111,14 +111,14 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Add horizontal line after the section */
-.about::after {
+/* Remove the existing .about::after rule and add a new separator div style */
+.about-separator {
   content: '';
   display: block;
   width: 100%;
   height: 1px;
   background-color: #3C3C5C;
-  margin-top: 4rem;
+  margin: 2rem 0;  /* Add margin above and below the line */
 }
 
 @media (max-width: 1024px) {
@@ -287,5 +287,130 @@
     transition: none;
     opacity: 1;
     transform: none;
+  }
+}
+
+/* Update the skills container spacing */
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;  /* Adjusted margin */
+}
+
+/* Enhanced skill card styling */
+.skill-card {
+  background: rgba(26, 26, 46, 0.95);  /* Slightly more opaque background */
+  border: 1px solid rgba(255, 255, 255, 0.2);  /* More visible border */
+  padding: 2rem;  /* Increased padding */
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);  /* Smoother transition */
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Subtle initial shadow */
+}
+
+.skill-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--hover-color);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 0;
+  filter: blur(20px);
+}
+
+.skill-card:hover {
+  transform: translateY(-10px) scale(1.02);  /* More pronounced lift effect */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);  /* Larger shadow on hover */
+  border-color: var(--hover-color);
+}
+
+.skill-card:hover::before {
+  opacity: 0.15;  /* More visible glow effect */
+}
+
+.skill-icon {
+  font-size: 3.5rem;  /* Larger icons */
+  margin-bottom: 2rem;
+  color: var(--hover-color);
+  transition: all 0.4s ease;
+  z-index: 1;
+  filter: drop-shadow(0 0 8px rgba(var(--hover-color), 0.3));  /* Icon glow effect */
+}
+
+.skill-card:hover .skill-icon {
+  transform: scale(1.15) translateY(-5px);  /* More dynamic icon animation */
+  filter: drop-shadow(0 0 12px var(--hover-color));  /* Enhanced glow on hover */
+}
+
+.skill-card h3 {
+  font-size: 1.5rem;  /* Larger title */
+  margin-bottom: 1rem;
+  color: #E0E0E0;
+  z-index: 1;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.skill-card:hover h3 {
+  color: var(--hover-color);  /* Title color changes on hover */
+  transform: translateY(-2px);
+}
+
+.skill-card p {
+  color: #a0a0a0;  /* Slightly darker text for better contrast */
+  line-height: 1.6;
+  z-index: 1;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.skill-card:hover p {
+  color: #E0E0E0;  /* Text brightens on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .skills-container {
+    gap: 1.5rem;
+    padding: 1.5rem;
+    margin: 3rem auto 1.5rem;
+  }
+
+  .skill-card {
+    padding: 1.5rem;
+  }
+
+  .skill-icon {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-container {
+    gap: 1rem;
+    padding: 1rem;
+    margin: 2rem auto 1rem;
+  }
+
+  .skill-card {
+    padding: 1.25rem;
+  }
+
+  .skill-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
   }
 }

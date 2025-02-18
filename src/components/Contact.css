@@ -12,7 +12,7 @@
 }
 
 .contact {
-  padding: 8rem 2rem 4rem;
+  padding: 4rem 2rem;
   background-color: #1A1A2E;
   display: flex;
   flex-direction: column;
@@ -21,6 +21,12 @@
   animation: fadeInUp 0.8s ease-out forwards;
   position: relative;
   z-index: 1;
+  scroll-margin-top: 5rem;
+}
+
+.contact-content {
+  margin-top: 0;
+  padding-top: 0;
 }
 
 .contact h2 {
@@ -128,6 +134,10 @@
 }
 
 @media (max-width: 768px) {
+  .contact {
+    padding: 4rem 1.5rem;
+  }
+
   .contact-form {
     width: 100%;
   }
@@ -160,6 +170,10 @@
 }
 
 @media (max-width: 480px) {
+  .contact {
+    padding: 3rem 1rem;
+  }
+
   .contact h2 {
     font-size: 2.5rem;
   }
