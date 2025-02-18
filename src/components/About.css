@@ -2,6 +2,10 @@
   padding: 4rem 2rem;
   background-color: #1A1A2E;
   position: relative;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0.2s;
+  scroll-margin-top: 5rem;
 }
 
 .about-content {
@@ -15,21 +19,37 @@
 .image-grid {
   flex: 1;
   position: relative;
+  animation: fadeInRight 0.8s ease-out forwards;
+  animation-delay: 0.4s;
+  opacity: 0;
 }
 
 .image-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
-  border: 2px solid #3C3C5C;
+  border: 2px solid #FFFFFF;
   padding: 1rem;
   background-color: transparent;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.image-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .profile-img {
   width: 100%;
   height: auto;
   display: block;
+  transition: all 0.3s ease-in-out;
+  filter: brightness(0.95);
+}
+
+.profile-img:hover {
+  transform: scale(1.02);
+  filter: brightness(1.05);
 }
 
 .about-text {
@@ -41,6 +61,22 @@
   font-size: 4rem;
   color: #E0E0E0;
   margin-bottom: 2rem;
+  position: relative;
+  padding-top: 2rem;
+  animation: fadeInLeft 0.8s ease-out forwards;
+  animation-delay: 0.4s;
+  opacity: 0;
+}
+
+.about-text h2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 3px;
+  background-color: #FFFFFF;
+  transition: all 0.3s ease;
 }
 
 .about-text p {
@@ -48,6 +84,9 @@
   margin-bottom: 2rem;
   line-height: 1.8;
   max-width: 800px;
+  animation: fadeInLeft 0.8s ease-out forwards;
+  animation-delay: 0.6s;
+  opacity: 0;
 }
 
 .work-button {
@@ -59,10 +98,15 @@
   margin-top: 2rem;
   transition: background-color 0.3s ease;
   font-size: 1.2rem;
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0.8s;
+  opacity: 0;
 }
 
 .work-button:hover {
   background-color: #3C3C5C;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Add horizontal line after the section */
@@ -91,30 +135,155 @@
 }
 
 @media (max-width: 768px) {
+  .about {
+    padding: 4rem 1.5rem;
+  }
+
   .about-content {
     flex-direction: column;
     text-align: center;
+    gap: 3rem;
+  }
+
+  .about-text h2::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .about-text h2 {
+    font-size: 3.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .about-text p {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    margin: 0 auto;
+    max-width: 600px;
   }
 
   .image-grid {
-    max-width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
   }
 
-  .about-text {
-    max-width: 100%;
+  .image-container {
+    gap: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   }
 
   .work-button {
-    margin: 0 auto;
+    font-size: 1.2rem;
+    padding: 1rem 2.5rem;
+    margin: 2.5rem auto 0;
+  }
+
+  .carousel-button {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  .carousel-button.prev {
+    left: 1rem;
+  }
+
+  .carousel-button.next {
+    right: 1rem;
+  }
+
+  .close-button {
+    top: 1rem;
+    right: 1rem;
+    width: 35px;
+    height: 35px;
+    font-size: 1.2rem;
   }
 }
 
 @media (max-width: 480px) {
-  .about-text h2 {
-    font-size: 2.5rem;
+  .about {
+    padding: 3rem 1rem;
   }
 
-  .image-grid {
-    grid-template-columns: 1fr;
+  .about-text h2 {
+    font-size: 2.8rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+  }
+
+  .image-container {
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .work-button {
+    font-size: 1.1rem;
+    padding: 0.9rem 2rem;
+  }
+}
+
+.skill-card {
+  border: 2px solid #FFFFFF;
+}
+
+.about-image {
+  border: 2px solid #FFFFFF;
+}
+
+/* Keep animation keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+
+  .about,
+  .about-text h2,
+  .about-text p,
+  .image-grid,
+  .work-button,
+  .image-container {
+    animation: none;
+    transition: none;
+    opacity: 1;
+    transform: none;
   }
 }

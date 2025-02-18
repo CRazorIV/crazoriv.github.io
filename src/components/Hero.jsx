@@ -8,6 +8,8 @@ import reactIcon from '../assets/Frame(2).png';
 import jsIcon from '../assets/Frame(3).png';
 import nodeIcon from '../assets/Frame(4).png';
 import phpIcon from '../assets/Frame(5).png';
+import htmlIcon from '../assets/Frame(10).png';
+import cssIcon from '../assets/Frame(9).png';
 import blueArrow from '../assets/blue-arrow.svg';
 import greenArrow from '../assets/green-arrow.svg';
 
@@ -58,19 +60,39 @@ const Hero = () => {
         </div>
 
         <div className="tech-stack">
-          <img src={pythonIcon} alt="Python" />
-          <img src={mysqlIcon} alt="MySQL" />
-          <img src={reactIcon} alt="React" />
-          <img src={jsIcon} alt="JavaScript" />
-          <img src={nodeIcon} alt="Node.js" />
-          <img src={phpIcon} alt="PHP" />
+          <div className="tech-stack-item">
+            <img src={htmlIcon} alt="HTML" />
+            <span className="tech-stack-tooltip">HTML</span>
+          </div>
+          <div className="tech-stack-item">
+            <img src={cssIcon} alt="CSS" />
+            <span className="tech-stack-tooltip">CSS</span>
+          </div>
+          <div className="tech-stack-item">
+            <img src={pythonIcon} alt="Python" />
+            <span className="tech-stack-tooltip">Python</span>
+          </div>
+          <div className="tech-stack-item">
+            <img src={mysqlIcon} alt="MySQL" />
+            <span className="tech-stack-tooltip">MySQL</span>
+          </div>
+          <div className="tech-stack-item">
+            <img src={reactIcon} alt="React" />
+            <span className="tech-stack-tooltip">React</span>
+          </div>
+          <div className="tech-stack-item">
+            <img src={jsIcon} alt="JavaScript" />
+            <span className="tech-stack-tooltip">JavaScript</span>
+          </div>
+          <div className="tech-stack-item">
+            <img src={nodeIcon} alt="Node.js" />
+            <span className="tech-stack-tooltip">Node.js</span>
+          </div>
+          <div className="tech-stack-item">
+            <img src={phpIcon} alt="PHP" />
+            <span className="tech-stack-tooltip">PHP</span>
+          </div>
         </div>
-      </div>
-      
-      <div className="scroll-indicator" 
-           onClick={() => document.getElementById('about').scrollIntoView({ behavior: 'smooth' })}
-           aria-label="Scroll to About section">
-        ↓↓
       </div>
     </section>
   );

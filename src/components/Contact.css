@@ -1,9 +1,26 @@
+/* Add animation keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .contact {
-  padding: 4rem 2rem;
+  padding: 8rem 2rem 4rem;
   background-color: #1A1A2E;
   display: flex;
   flex-direction: column;
   align-items: center;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+  position: relative;
+  z-index: 1;
 }
 
 .contact h2 {
@@ -11,6 +28,25 @@
   font-size: 4rem;
   margin-bottom: 3rem;
   text-align: center;
+  position: relative;
+  padding-top: 2rem;
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.contact h2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: #FFFFFF;
+  transition: all 0.3s ease;
 }
 
 .contact-form {
@@ -19,6 +55,9 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0.4s;
 }
 
 .form-row {
@@ -30,22 +69,24 @@
   flex: 1;
   background: transparent;
   border: none;
-  border-bottom: 1px solid #3C3C5C;
+  border-bottom: 1px solid #FFFFFF;
   padding: 1rem 1.5rem;
   color: #E0E0E0;
   font-size: 1.1rem;
+  transition: all 0.3s ease-in-out;
 }
 
 .form-textarea {
   width: 100%;
   background: transparent;
   border: none;
-  border-bottom: 1px solid #3C3C5C;
+  border-bottom: 1px solid #FFFFFF;
   padding: 1rem 1.5rem;
   color: #E0E0E0;
   font-size: 1.1rem;
   min-height: 100px;
   resize: vertical;
+  transition: all 0.3s ease-in-out;
 }
 
 .form-input::placeholder,
@@ -57,19 +98,23 @@
 .form-input:focus,
 .form-textarea:focus {
   outline: none;
-  border-bottom-color: #E0E0E0;
+  border-bottom-color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .success-message {
   color: #4CAF50;
   text-align: center;
   margin-top: 1rem;
+  animation: fadeInUp 0.5s ease-out forwards;
 }
 
 .error-message {
   color: #f44336;
   text-align: center;
   margin-top: 1rem;
+  animation: fadeInUp 0.5s ease-out forwards;
 }
 
 @media (max-width: 1024px) {
@@ -96,11 +141,22 @@
     width: 100%;
   }
 
-  .hero-text h1 { font-size: 2.5rem; }
-  .hero-text h2 { font-size: 3.5rem; }
-  .hero-text h3 { font-size: 2rem; }
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-text h2 {
+    font-size: 3.5rem;
+  }
+
+  .hero-text h3 {
+    font-size: 2rem;
+  }
+
   .about-text h2,
-  .contact h2 { font-size: 3rem; }
+  .contact h2 {
+    font-size: 3rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -112,14 +168,52 @@
     padding: 1.5rem;
   }
 
-  .hero-text h1 { font-size: 2rem; }
-  .hero-text h2 { font-size: 3rem; }
-  .hero-text h3 { font-size: 1.75rem; }
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text h2 {
+    font-size: 3rem;
+  }
+
+  .hero-text h3 {
+    font-size: 1.75rem;
+  }
+
   .about-text h2,
-  .contact h2 { font-size: 2.5rem; }
+  .contact h2 {
+    font-size: 2.5rem;
+  }
 }
 
 .contact button {
   font-size: 1.2rem;
   padding: 1rem 3rem;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0.6s;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+
+  .contact,
+  .contact h2,
+  .contact-form,
+  .form-input,
+  .form-textarea,
+  .contact button,
+  .success-message,
+  .error-message {
+    animation: none;
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
 }

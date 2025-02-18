@@ -11,6 +11,9 @@
   margin-bottom: 8rem;
   color: #E0E0E0;
   text-align: center;
+  border: none;
+  border-bottom: 1px solid #FFFFFF;
+  padding-bottom: 4rem;
 }
 
 .project-card:nth-child(even) {
@@ -48,7 +51,7 @@
 .visit-project {
   display: inline-block;
   padding: 1rem 3rem;
-  border: 1px solid #3C3C5C;
+  border: 2px solid #FFFFFF;
   color: #E0E0E0;
   text-decoration: none;
   transition: background-color 0.3s ease;
@@ -161,71 +164,72 @@
 @media (max-width: 768px) {
   .project-card {
     flex-direction: column !important;
-    /* Override the nth-child(even) */
-    gap: 2rem;
-    margin-bottom: 4rem;
+    gap: 3rem;
+    margin-bottom: 5rem;
+    padding-bottom: 3rem;
   }
 
   .project-content {
     order: 2;
-    /* Move content below image on mobile */
+  }
+
+  .project-title {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .project-description {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+  }
+
+  .project-description h4 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
   }
 
   .project-image {
     order: 1;
-    /* Move image above content on mobile */
     min-height: 300px;
     width: 100%;
-    transform: none !important;
-    transition: none;
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   }
 
-  .project-title {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .tech-stack {
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-bottom: 1rem;
+  .visit-project {
+    font-size: 1.2rem;
+    padding: 1rem 2.5rem;
   }
 
   .tech-icon {
     height: 48px;
   }
-
-  .project-description {
-    font-size: 0.95rem;
-    margin-bottom: 2rem;
-  }
-
-  .visit-project {
-    padding: 0.75rem 2rem;
-    font-size: 1rem;
-  }
 }
 
 @media (max-width: 480px) {
   .project-card {
-    gap: 1.5rem;
-    margin-bottom: 3rem;
+    gap: 2rem;
+    margin-bottom: 4rem;
   }
 
   .project-title {
-    font-size: 1.75rem;
-  }
-
-  .project-image {
-    min-height: 200px;
+    font-size: 2rem;
   }
 
   .project-description {
-    font-size: 0.9rem;
+    font-size: 1rem;
+  }
+
+  .project-image {
+    min-height: 250px;
   }
 
   .visit-project {
-    padding: 0.5rem 1.5rem;
+    font-size: 1.1rem;
+    padding: 0.9rem 2rem;
   }
 
   .tech-icon {

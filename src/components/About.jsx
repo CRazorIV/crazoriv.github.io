@@ -1,6 +1,7 @@
+import { useState } from 'react';
 import './About.css';
 import { Link } from 'react-router-dom';
-import Yuri from '../assets/yuri.png'; // Update with your image path
+import Yuri from '../assets/yuri.png';
 
 const About = () => {
   return (
@@ -8,10 +9,14 @@ const About = () => {
       <div className="about-content">
         <div className="image-grid">
           <div className="image-container">
-            <img src={Yuri} alt="Yuri Kuvalja" className="profile-img" />
-            <img src={Yuri} alt="Yuri Kuvalja" className="profile-img" />
-            <img src={Yuri} alt="Yuri Kuvalja" className="profile-img" />
-            <img src={Yuri} alt="Yuri Kuvalja" className="profile-img" />
+            {[Yuri, Yuri, Yuri, Yuri].map((image, index) => (
+              <img
+                key={index}
+                src={image}
+                alt={`Yuri Kuvalja ${index + 1}`}
+                className="profile-img"
+              />
+            ))}
           </div>
         </div>
 
