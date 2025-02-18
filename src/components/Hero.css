@@ -761,7 +761,7 @@
 .contact button {
   display: inline-block;
   padding: 1rem 2rem;
-  border: 1px solid #FFFFFF;
+  border: 1px solid #3C3C5C;
   background-color: transparent;
   color: #E0E0E0;
   text-decoration: none;
@@ -775,7 +775,7 @@
 .cv-button:hover,
 .visit-project:hover,
 .contact button:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #3C3C5C;
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }

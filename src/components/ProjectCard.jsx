@@ -48,12 +48,14 @@ const ProjectCard = ({ title, description, technologies = [], imageUrl, liveUrl 
                 
                 <div className="project-tech-stack">
                     {technologies?.map((tech, index) => (
-                        <img 
-                            key={index} 
-                            src={techIcons[tech]} 
-                            alt={`${tech} icon`} 
-                            className="tech-icon" 
-                        />
+                        <div key={index} className="tech-stack-item">
+                            <img 
+                                src={techIcons[tech]} 
+                                alt={`${tech} icon`} 
+                                className="tech-icon"
+                            />
+                            <div className="tech-stack-tooltip">{tech}</div>
+                        </div>
                     ))}
                 </div>
 

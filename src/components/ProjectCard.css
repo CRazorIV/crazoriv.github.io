@@ -51,10 +51,10 @@
 .visit-project {
   display: inline-block;
   padding: 1rem 3rem;
-  border: 2px solid #FFFFFF;
+  border: 1px solid #3C3C5C;
   color: #E0E0E0;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
   font-size: 1.1rem;
   margin: 0 auto;
   align-self: center;
@@ -62,6 +62,8 @@
 
 .visit-project:hover {
   background-color: #3C3C5C;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .project-image {
@@ -111,14 +113,43 @@
   justify-content: center;
 }
 
+.tech-stack-item {
+  position: relative;
+  display: inline-block;
+}
+
 .tech-icon {
   height: 64px;
   width: auto;
-  transition: transform 0.2s ease;
+  transition: transform 0.3s ease;
 }
 
 .tech-icon:hover {
-  transform: scale(1.1);
+  transform: translateY(-5px) scale(1.1);
+  filter: brightness(1.2);
+}
+
+.tech-stack-tooltip {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(26, 26, 46, 0.9);
+  color: #E0E0E0;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tech-stack-item:hover .tech-stack-tooltip {
+  opacity: 1;
+  visibility: visible;
+  top: -50px;
 }
 
 .tech-tag {
@@ -234,5 +265,9 @@
 
   .tech-icon {
     height: 40px;
+  }
+
+  .tech-stack-tooltip {
+    display: none;
   }
 }
