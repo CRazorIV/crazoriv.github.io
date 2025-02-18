@@ -91,21 +91,23 @@
 
 .work-button {
   display: inline-block;
-  padding: 1rem 3rem;
-  border: 2px solid #3C3C5C;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #3C3C5C;
   color: #E0E0E0;
   text-decoration: none;
   margin-top: 2rem;
-  transition: background-color 0.3s ease;
-  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
   animation: fadeInUp 0.8s ease-out forwards;
   animation-delay: 0.8s;
   opacity: 0;
+  border-radius: 4px;
+  background-color: transparent;
 }
 
 .work-button:hover {
   background-color: #3C3C5C;
-  transform: translateY(-3px);
+  transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 

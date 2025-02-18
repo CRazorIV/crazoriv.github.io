@@ -1,9 +1,20 @@
 import { useState } from 'react';
 import './About.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Yuri from '../assets/yuri.png';
 
 const About = () => {
+  const navigate = useNavigate();
+
+  const handleProjectsClick = (e) => {
+    e.preventDefault();
+    navigate('/projects');
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <section id="about" className="about">
       <div className="about-content">
@@ -27,7 +38,7 @@ const About = () => {
           
           <p>I'm passionate about bringing ideas to life through my own projects, where I get to challenge myself, apply my skills, and turn creativity into something tangible. Each project is an opportunity to grow, learn, and push the boundaries of what I can achieve!</p>
           
-          <Link to="/projects" className="work-button">See my work</Link>
+          <Link to="/projects" className="work-button" onClick={handleProjectsClick}>See my work</Link>
         </div>
       </div>
     </section>
