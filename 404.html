@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Yuri Kuvalja - Portfolio</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #1a1a2e;
+        color: #e0e0e0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      h1 {
+        font-size: 8rem;
+        margin: 0;
+        background: linear-gradient(45deg, #61dafb, #00ff88);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      h2 {
+        font-size: 2.5rem;
+        margin: 1rem 0;
+      }
+      p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        color: #888;
+      }
+      .loader {
+        width: 50px;
+        height: 50px;
+        border: 3px solid #3c3c5c;
+        border-top: 3px solid #61dafb;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin: 2rem 0;
+      }
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 6rem;
+        }
+        h2 {
+          font-size: 2rem;
+        }
+        p {
+          font-size: 1.1rem;
+        }
+      }
+      @media (max-width: 480px) {
+        h1 {
+          font-size: 4rem;
+        }
+        h2 {
+          font-size: 1.8rem;
+        }
+        p {
+          font-size: 1rem;
+        }
+      }
+    </style>
+    <script type="text/javascript">
+      // Single Page Apps for GitHub Pages
+      // MIT License
+      // https://github.com/rafgraph/spa-github-pages
+      var pathSegmentsToKeep = 0;
+
+      var l = window.location;
+      l.replace(
+        l.protocol +
+          "//" +
+          l.hostname +
+          (l.port ? ":" + l.port : "") +
+          l.pathname
+            .split("/")
+            .slice(0, 1 + pathSegmentsToKeep)
+            .join("/") +
+          "/?/" +
+          l.pathname
+            .slice(1)
+            .split("/")
+            .slice(pathSegmentsToKeep)
+            .join("/")
+            .replace(/&/g, "~and~") +
+          (l.search ? "&" + l.search.slice(1).replace(/&/g, "~and~") : "") +
+          l.hash
+      );
+    </script>
+  </head>
+  <body>
+    <h1>404</h1>
+    <h2>Page Not Found</h2>
+    <p>Redirecting you to the homepage...</p>
+    <div class="loader"></div>
+  </body>
+</html>
