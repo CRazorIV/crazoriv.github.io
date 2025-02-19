@@ -4,11 +4,29 @@ import About from "../components/About";
 import Contact from "../components/Contact";
 import './Home.css';
 import { useScrollFadeIn } from '../hooks/useScrollFadeIn';
+import { useEffect } from 'react';
 
 const Home = () => {
     const [heroRef, isHeroVisible] = useScrollFadeIn();
     const [aboutRef, isAboutVisible] = useScrollFadeIn();
     const [contactRef, isContactVisible] = useScrollFadeIn();
+
+    useEffect(() => {
+        // Ensure we start at the top when the component mounts
+        window.scrollTo(0, 0);
+        
+        // Prevent scroll restoration
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+
+        return () => {
+            // Reset scroll restoration to auto when component unmounts
+            if ('scrollRestoration' in history) {
+                history.scrollRestoration = 'auto';
+            }
+        };
+    }, []);
 
     return (
         <Layout>
