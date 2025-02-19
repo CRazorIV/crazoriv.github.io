@@ -383,6 +383,10 @@
     margin-top: 4.5rem;
   }
 
+  .hero-text {
+    min-height: 180px;
+  }
+
   .hero-text h1 {
     font-size: 1.8rem;
   }
@@ -393,6 +397,7 @@
 
   .hero-text h3 {
     font-size: 1.6rem;
+    min-height: 2.5rem;
   }
 
   .hero-image {

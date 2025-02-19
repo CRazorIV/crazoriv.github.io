@@ -18,7 +18,7 @@ const Hero = () => {
     const options = {
       strings: [
         '<span class="green-text">Developer</span>',
-        '<span class="purple-text">Developer</span>'
+        '<span class="purple-text">Programmer</span>'
       ],
       typeSpeed: 100,
       backSpeed: 50,
