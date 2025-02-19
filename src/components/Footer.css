@@ -45,12 +45,9 @@
     flex-direction: column;
 }
 
+/* Hide footer on tablet and mobile */
 @media (max-width: 768px) {
     .footer {
-        padding: 1.5rem 0;
-    }
-
-    .social-links {
-        gap: 1.5rem;
+        display: none;
     }
 }

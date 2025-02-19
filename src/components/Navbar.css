@@ -147,12 +147,13 @@
     height: 100vh;
     width: 100%;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     background-color: #1A1A2E;
     padding: 4rem 2rem;
     transition: top 0.3s ease;
-    gap: 3rem;
+    gap: 2rem;
+    overflow-y: auto;
   }
 
   .menu.active {
@@ -168,12 +169,45 @@
   .cv-button {
     font-size: 1.3rem;
     padding: 1rem 2rem;
+    margin-bottom: 2rem;
   }
 
   .menu .logo {
     display: block !important;
     font-size: 2.5rem;
     margin-bottom: 2rem;
+  }
+
+  /* Mobile Footer Styles */
+  .mobile-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: auto;
+    padding-bottom: 2rem;
+    width: 100%;
+  }
+
+  .mobile-footer .social-links {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .mobile-footer .social-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+  }
+
+  .mobile-footer .social-icon:hover {
+    transform: translateY(-3px);
+  }
+
+  .mobile-footer .copyright {
+    font-size: 0.9rem;
+    color: #888;
+    text-align: center;
   }
 }
 
@@ -187,6 +221,14 @@
   .cv-button {
     font-size: 1.2rem;
     padding: 0.9rem 1.8rem;
+  }
+
+  .mobile-footer {
+    padding-bottom: 4rem;
+  }
+
+  .mobile-footer .social-links {
+    gap: 1.5rem;
   }
 }
 

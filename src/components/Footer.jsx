@@ -7,7 +7,7 @@ import twitterIcon from '../assets/twitter.svg';
 const Footer = () => {
     return (
         <footer className="footer">
-            <div className="footer-content">
+            <div className="footer-content desktop-footer">
                 <div className="social-links">
                     <a 
                         href="https://github.com/crazoriv" 
