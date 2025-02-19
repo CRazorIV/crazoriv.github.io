@@ -8,14 +8,14 @@
   display: flex;
   justify-content: space-between;
   gap: 6rem;
-  margin-bottom: 8rem;
+  margin-bottom: 4rem;
   color: #E0E0E0;
   text-align: center;
   border: none;
   border-bottom: 1px solid #FFFFFF;
-  padding-bottom: 4rem;
+  padding: 1rem 1rem 4rem 1rem;
   width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .project-card:nth-child(even) {
@@ -28,20 +28,25 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .project-title {
   font-size: 3rem;
   margin-bottom: 2rem;
+  word-wrap: break-word;
+  width: 100%;
+  max-width: 100%;
+  padding: 0 1rem;
 }
 
 .project-description {
   margin-bottom: 3rem;
-  max-width: 800px;
   font-size: 1.1rem;
   width: 100%;
+  word-wrap: break-word;
+  padding: 0 1rem;
 }
 
 .project-description h4 {
@@ -61,9 +66,8 @@
   color: #E0E0E0;
   text-decoration: none;
   font-size: 1.1rem;
-  margin: 0 auto;
-  align-self: center;
-  background-color: transparent;
+  margin: 1rem auto;
+  max-width: 100%;
 }
 
 .project-image {
@@ -75,7 +79,19 @@
   justify-content: center;
   min-height: 400px;
   overflow: hidden;
+  border-radius: 0;
   border: 2px solid #E0E0E0;
+  max-width: 100%;
+  margin: 0 auto;
+  padding-top: 10px;
+  transform: translateY(0) scale(1);
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
+  will-change: transform;
+}
+
+.project-image:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .project-image img {
@@ -83,14 +99,21 @@
   height: 100%;
   object-fit: contain;
   padding: 1rem;
+  transition: transform 0.4s ease;
+}
+
+.project-image:hover img {
+  transform: scale(1.01);
 }
 
 .project-tech-stack {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
-  margin: 1.5rem 0;
+  margin: 2rem 0;
   justify-content: center;
+  width: 100%;
+  padding: 0 1rem;
 }
 
 .tech-stack-item {
@@ -140,7 +163,7 @@
 @media (max-width: 1024px) {
   .project-card {
     gap: 4rem;
-    margin-bottom: 6rem;
+    padding: 0 0.75rem 4rem 0.75rem;
   }
 
   .project-title {
@@ -148,7 +171,6 @@
   }
 
   .project-description {
-    max-width: 600px;
     font-size: 1rem;
   }
 
@@ -158,55 +180,57 @@
 }
 
 @media (max-width: 768px) {
-  .project-card {
-    flex-direction: column !important;
-    gap: 2rem;
-    margin-bottom: 4rem;
-    padding-bottom: 3rem;
+
+  .project-card,
+  .project-card:nth-child(even) {
+    flex-direction: column;
+    gap: 3rem;
+    padding: 1rem 0.5rem 3rem 0.5rem;
   }
 
   .project-content {
     order: 2;
+    padding: 0;
   }
 
   .project-title {
-    font-size: 2rem;
+    font-size: 2.2rem;
     margin-bottom: 1.5rem;
   }
 
   .project-description {
     font-size: 1rem;
     margin-bottom: 2rem;
-    padding: 0 1rem;
-  }
-
-  .project-description h4 {
-    font-size: 1.2rem;
-    margin-bottom: 0.75rem;
   }
 
   .project-image {
     order: 1;
     min-height: 250px;
     width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
+    margin-top: 10px;
   }
 
-  .tech-icon {
-    height: 48px;
+  .project-image:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .visit-project {
+    font-size: 1.1rem;
+    padding: 0.9rem 2.5rem;
+    width: auto;
+    min-width: 200px;
   }
 }
 
 @media (max-width: 480px) {
   .project-card {
-    gap: 1.5rem;
-    margin-bottom: 3rem;
-    padding-bottom: 2rem;
+    gap: 2rem;
+    padding: 1rem 0.25rem 2rem 0.25rem;
   }
 
   .project-title {
-    font-size: 1.75rem;
+    font-size: 1.8rem;
   }
 
   .project-description {
@@ -215,26 +239,31 @@
 
   .project-image {
     min-height: 200px;
+    margin-top: 8px;
+  }
+
+  .project-image:hover {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
   }
 
   .tech-icon {
     height: 40px;
   }
 
-  .tech-stack-tooltip {
-    display: none;
+  .project-tech-stack {
+    gap: 1rem;
   }
 }
 
 @media (max-width: 320px) {
   .project-card {
-    gap: 1rem;
-    margin-bottom: 2rem;
-    padding-bottom: 1.5rem;
+    gap: 1.5rem;
+    padding: 0.75rem 0.25rem 1.5rem 0.25rem;
   }
 
   .project-title {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 
   .project-description {
@@ -242,10 +271,26 @@
   }
 
   .project-image {
-    min-height: 180px;
+    min-height: 160px;
+    margin-top: 6px;
+  }
+
+  .project-image:hover {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   }
 
   .tech-icon {
     height: 32px;
+  }
+
+  .project-tech-stack {
+    gap: 0.75rem;
+  }
+
+  .visit-project {
+    font-size: 0.9rem;
+    padding: 0.8rem 2rem;
+    min-width: 160px;
   }
 }
