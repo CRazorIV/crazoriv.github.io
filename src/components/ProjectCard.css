@@ -14,6 +14,8 @@
   border: none;
   border-bottom: 1px solid #FFFFFF;
   padding-bottom: 4rem;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .project-card:nth-child(even) {
@@ -25,6 +27,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .project-title {
@@ -36,6 +41,7 @@
   margin-bottom: 3rem;
   max-width: 800px;
   font-size: 1.1rem;
+  width: 100%;
 }
 
 .project-description h4 {
@@ -54,16 +60,10 @@
   border: 1px solid #3C3C5C;
   color: #E0E0E0;
   text-decoration: none;
-  transition: all 0.3s ease;
   font-size: 1.1rem;
   margin: 0 auto;
   align-self: center;
-}
-
-.visit-project:hover {
-  background-color: #3C3C5C;
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  background-color: transparent;
 }
 
 .project-image {
@@ -75,12 +75,7 @@
   justify-content: center;
   min-height: 400px;
   overflow: hidden;
-  border-radius: 0;
   border: 2px solid #E0E0E0;
-  transition: transform 0.2s ease-out;
-  cursor: default;
-  transform-style: preserve-3d;
-  perspective: 1000px;
 }
 
 .project-image img {
@@ -88,21 +83,6 @@
   height: 100%;
   object-fit: contain;
   padding: 1rem;
-  transition: transform 0.2s ease-out;
-  transform-style: preserve-3d;
-}
-
-.project-image:hover {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-}
-
-/* For even-numbered cards (right side), rotate the other way */
-.project-card:nth-child(even) .project-image {
-  transform-origin: left center;
-}
-
-.project-card:nth-child(even) .project-image:hover {
-  transform: translateY(-5px) rotate(2deg);
 }
 
 .project-tech-stack {
@@ -121,12 +101,6 @@
 .tech-icon {
   height: 64px;
   width: auto;
-  transition: transform 0.3s ease;
-}
-
-.tech-icon:hover {
-  transform: translateY(-5px) scale(1.1);
-  filter: brightness(1.2);
 }
 
 .tech-stack-tooltip {
@@ -178,25 +152,16 @@
     font-size: 1rem;
   }
 
-  .tech-stack {
-    gap: 1rem;
-    margin-bottom: 2rem;
-  }
-
   .tech-icon {
     height: 56px;
-  }
-
-  .tech-stack::after {
-    max-width: 600px;
   }
 }
 
 @media (max-width: 768px) {
   .project-card {
     flex-direction: column !important;
-    gap: 3rem;
-    margin-bottom: 5rem;
+    gap: 2rem;
+    margin-bottom: 4rem;
     padding-bottom: 3rem;
   }
 
@@ -205,34 +170,27 @@
   }
 
   .project-title {
-    font-size: 2.2rem;
+    font-size: 2rem;
     margin-bottom: 1.5rem;
   }
 
   .project-description {
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin-bottom: 2rem;
     padding: 0 1rem;
   }
 
   .project-description h4 {
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
   }
 
   .project-image {
     order: 1;
-    min-height: 300px;
+    min-height: 250px;
     width: 100%;
     max-width: 500px;
     margin: 0 auto;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  }
-
-  .visit-project {
-    font-size: 1.2rem;
-    padding: 1rem 2.5rem;
   }
 
   .tech-icon {
@@ -242,25 +200,21 @@
 
 @media (max-width: 480px) {
   .project-card {
-    gap: 2rem;
-    margin-bottom: 4rem;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
   }
 
   .project-title {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 
   .project-description {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 
   .project-image {
-    min-height: 250px;
-  }
-
-  .visit-project {
-    font-size: 1.1rem;
-    padding: 0.9rem 2rem;
+    min-height: 200px;
   }
 
   .tech-icon {
@@ -269,5 +223,29 @@
 
   .tech-stack-tooltip {
     display: none;
+  }
+}
+
+@media (max-width: 320px) {
+  .project-card {
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .project-title {
+    font-size: 1.5rem;
+  }
+
+  .project-description {
+    font-size: 0.9rem;
+  }
+
+  .project-image {
+    min-height: 180px;
+  }
+
+  .tech-icon {
+    height: 32px;
   }
 }
