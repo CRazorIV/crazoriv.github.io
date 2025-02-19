@@ -1,17 +1,61 @@
+import { useState } from 'react';
 import './About.css';
-import { Link } from 'react-router-dom';
-import Yuri from '../assets/yuri.png'; // Update with your image path
+import { Link, useNavigate } from 'react-router-dom';
+import Yuri from '../assets/yuri.png';
+import { FaServer, FaDatabase, FaReact, FaTasks } from 'react-icons/fa';
 
 const About = () => {
+  const navigate = useNavigate();
+
+  const skills = [
+    {
+      title: "Backend",
+      icon: <FaServer />,
+      description: "Building robust server-side applications with Python, Node.js, and PHP",
+      color: "#8A2BE2"
+    },
+    {
+      title: "Databases",
+      icon: <FaDatabase />,
+      description: "Designing and managing MySQL databases with efficient queries and structures",
+      color: "#FF4444"
+    },
+    {
+      title: "Frontend",
+      icon: <FaReact />,
+      description: "Creating responsive and interactive UIs with React, JavaScript, and modern CSS",
+      color: "#2196F3"
+    },
+    {
+      title: "Scrum & Agile",
+      icon: <FaTasks />,
+      description: "Working with agile methodologies to ensure efficient project delivery",
+      color: "#FF69B4"
+    }
+  ];
+
+  const handleProjectsClick = (e) => {
+    e.preventDefault();
+    navigate('/projects');
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <section id="about" className="about">
       <div className="about-content">
         <div className="image-grid">
           <div className="image-container">
-            <img src={Yuri} alt="Yuri Kuvalja" className="profile-img" />
-            <img src={Yuri} alt="Yuri Kuvalja" className="profile-img" />
-            <img src={Yuri} alt="Yuri Kuvalja" className="profile-img" />
-            <img src={Yuri} alt="Yuri Kuvalja" className="profile-img" />
+            {[Yuri, Yuri, Yuri, Yuri].map((image, index) => (
+              <img
+                key={index}
+                src={image}
+                alt={`Yuri Kuvalja ${index + 1}`}
+                className="profile-img"
+              />
+            ))}
           </div>
         </div>
 
@@ -22,8 +66,26 @@ const About = () => {
           
           <p>I'm passionate about bringing ideas to life through my own projects, where I get to challenge myself, apply my skills, and turn creativity into something tangible. Each project is an opportunity to grow, learn, and push the boundaries of what I can achieve!</p>
           
-          <Link to="/projects" className="work-button">See my work</Link>
+          <Link to="/projects" className="work-button" onClick={handleProjectsClick}>See my work</Link>
         </div>
+      </div>
+
+      <div className="about-separator"></div>
+
+      <div className="skills-container">
+        {skills.map((skill, index) => (
+          <div 
+            className="skill-card" 
+            key={index}
+            style={{"--hover-color": skill.color}}
+          >
+            <div className="skill-icon">
+              {skill.icon}
+            </div>
+            <h3>{skill.title}</h3>
+            <p>{skill.description}</p>
+          </div>
+        ))}
       </div>
     </section>
   );

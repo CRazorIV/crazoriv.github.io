@@ -4,7 +4,8 @@
     padding: 2rem 0;
     width: 100%;
     min-height: 100px;
-    margin-top: auto;  /* Push footer to bottom */
+    margin-top: auto;
+    /* Push footer to bottom */
 }
 
 .footer-content {
@@ -44,12 +45,9 @@
     flex-direction: column;
 }
 
+/* Hide footer on tablet and mobile */
 @media (max-width: 768px) {
     .footer {
-        padding: 1.5rem 0;
-    }
-    
-    .social-links {
-        gap: 1.5rem;
+        display: none;
     }
 }

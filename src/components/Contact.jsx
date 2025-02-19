@@ -18,8 +18,8 @@ const Contact = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prevState => ({
-        ...prevState,
-        [name]: value
+      ...prevState,
+      [name]: value
     }));
   };
 
@@ -32,7 +32,6 @@ const Contact = () => {
         reply_to: formData.email,
         message: formData.message
       };
-      
 
       await emailjs.send(
         'service_0lapaf6',
