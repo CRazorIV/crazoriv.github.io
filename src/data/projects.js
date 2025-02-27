@@ -16,12 +16,14 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Work in progress...",
+    title: "2048py",
     image: projectImage2, // Use the imported image
-    problem: "There is still a lot of work to do",
-    solution: "So let me keep working on it ;)",
-    // technologies: ["React", "Node.js"],
-    // projectUrl: "https://ecommerce-demo.com",
+    problem:
+      "I wanted to practice my Python skills with general programming concepts and building UI's with TKinter",
+    solution:
+      "A game I made to practice my Python skills and building UI's with TKinter",
+    technologies: ["Python"],
+    projectUrl: "https://github.com/CRazorIV/2048py",
   },
   // ... other projects
 ];

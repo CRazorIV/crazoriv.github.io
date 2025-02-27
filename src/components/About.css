@@ -58,7 +58,7 @@
 }
 
 .about-text h2 {
-  font-size: 4rem;
+  font-size: 5rem;
   color: #E0E0E0;
   margin-bottom: 2rem;
   position: relative;
@@ -84,6 +84,7 @@
   margin-bottom: 2rem;
   line-height: 1.8;
   max-width: 800px;
+  font-size: 1.2rem;
   animation: fadeInLeft 0.8s ease-out forwards;
   animation-delay: 0.6s;
   opacity: 0;
@@ -153,7 +154,7 @@
   }
 
   .about-text h2 {
-    font-size: 3.2rem;
+    font-size: 3.5rem;
     margin-bottom: 2rem;
   }
 
@@ -211,7 +212,7 @@
   }
 
   .about-text h2 {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
   }
 
   .about-text p {

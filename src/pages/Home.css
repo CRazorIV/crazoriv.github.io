@@ -34,7 +34,7 @@ body {
 /* Add responsive adjustments */
 @media (max-width: 1024px) {
     .home-container {
-        padding: 0 2rem;
+        padding: 0 1.5rem;
     }
 
     .home-container>section {
@@ -44,7 +44,7 @@ body {
 
 @media (max-width: 768px) {
     .home-container {
-        padding: 0 1.5rem;
+        padding: 0 1rem;
     }
 
     .home-container>section {
@@ -54,7 +54,7 @@ body {
 
 @media (max-width: 480px) {
     .home-container {
-        padding: 0 1rem;
+        padding: 0 0.5rem;
     }
 
     .home-container>section {
