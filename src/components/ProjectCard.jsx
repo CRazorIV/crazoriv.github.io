@@ -71,7 +71,7 @@ const ProjectCard = ({ title, description, technologies = [], imageUrl, liveUrl 
                     </div>
                 </div>
                 
-                <a href={liveUrl} className="visit-project">Github source</a>
+                <a href={liveUrl} className="visit-project">Visit Project</a>
             </div>
             
             <div 

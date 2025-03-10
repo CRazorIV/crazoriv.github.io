@@ -1,5 +1,5 @@
-import projectImage2 from "../assets/yuri.png";
-import projectImage3 from "../assets/QuizzieScreenshot.png";
+import projectImage3 from "../assets/quizzie.png";
+import projectImage4 from "../assets/2048py.png";
 // Import other images as needed
 
 export const projects = [
@@ -12,12 +12,12 @@ export const projects = [
     solution:
       "A quiz application that allows users to create and take quizzes, with features like multiple choice questions, timers, and score tracking.",
     technologies: ["HTML", "CSS", "JavaScript"],
-    // projectUrl: "under development",
+    projectUrl: "https://101356.stu.sd-lab.nl/quizzie/index.html",
   },
   {
     id: 2,
     title: "2048py",
-    image: projectImage2, // Use the imported image
+    image: projectImage4, // Use the imported image
     problem:
       "I wanted to practice my Python skills with general programming concepts and building UI's with TKinter",
     solution:
