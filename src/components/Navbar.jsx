@@ -76,9 +76,9 @@ const Navbar = () => {
         <Link to="/projects" onClick={handleProjectsClick}>Projects</Link>
         <span className="nav-item" onClick={() => scrollToSection('contact')}>Contact</span>
         <a 
-          href="/Yuri_Kuvalja_CV.pdf"
+          href="/Yuri_Kuvalja_curriculum_vitae.pdf"
           className="cv-button" 
-          download="Yuri_Kuvalja_CV.pdf"
+          download="Yuri_Kuvalja_curriculum_vitae.pdf"
           onClick={handleLinkClick}
         >
           Download CV
