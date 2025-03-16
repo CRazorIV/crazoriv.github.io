@@ -1,0 +1,1 @@
+import{j as o,L as e}from"./index-FoCtqx6w.js";const n=()=>o.jsxs("div",{className:"not-found",children:[o.jsx("h1",{children:"404"}),o.jsx("h2",{children:"Page Not Found"}),o.jsx("p",{children:"The page you're looking for doesn't exist or has been moved."}),o.jsx(e,{to:"/",className:"home-button",children:"Back to Home"})]});export{n as default};
