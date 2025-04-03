@@ -1,5 +1,6 @@
 import projectImage3 from "../assets/quizzie.png";
 import projectImage4 from "../assets/2048py.png";
+import projectImage5 from "../assets/ymp4.png";
 // Import other images as needed
 
 export const projects = [
@@ -24,6 +25,17 @@ export const projects = [
       "A game I made to practice my Python skills and building UI's with TKinter",
     technologies: ["Python"],
     projectUrl: "https://github.com/CRazorIV/2048py",
+  },
+  {
+    id: 3,
+    title: "Youtube mp4 downloader",
+    image: projectImage5, // Use the imported image
+    problem:
+      "I wanted a convient tool for downloading .mp4 files for my projects from Youtube. But every website or tool I used contained some form of ads",
+    solution:
+      "So I made a Python script to download .mp4 videos from Youtube URLS without annoying ads.",
+    technologies: ["Python"],
+    projectUrl: "https://github.com/CRazorIV/YT_downloader",
   },
   // ... other projects
 ];
