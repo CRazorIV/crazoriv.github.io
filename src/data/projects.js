@@ -1,19 +1,19 @@
 import projectImage3 from "../assets/quizzie.png";
 import projectImage4 from "../assets/2048py.png";
 import projectImage5 from "../assets/ymp4.png";
+import projectImage6 from "../assets/luxury-autos.png";
 // Import other images as needed
 
 export const projects = [
   {
     id: 1,
-    title: "Quizzie",
-    image: projectImage3, // Use the imported image
+    title: "Luxury Autos",
+    image: projectImage6,
     problem:
-      "The client asked me and my team to make a quiz application like Kahoot.",
-    solution:
-      "A quiz application that allows users to create and take quizzes, with features like multiple choice questions, timers, and score tracking.",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    projectUrl: "https://101356.stu.sd-lab.nl/quizzie/index.html",
+      "I wanted to practice my React skills and build a modern frontend for a car dealership.",
+    solution: "A nice sleek modern frontend that showcases luxury cars.",
+    technologies: ["React", "JavaScript", "CSS", "HTML"],
+    projectUrl: "https://github.com/CRazorIV/Luxury-Autosport",
   },
   {
     id: 2,
@@ -36,6 +36,17 @@ export const projects = [
       "So I made a Python script to download .mp4 videos from Youtube URLS without annoying ads.",
     technologies: ["Python"],
     projectUrl: "https://github.com/CRazorIV/YT_downloader",
+  },
+  {
+    id: 4,
+    title: "Quizzie",
+    image: projectImage3, // Use the imported image
+    problem:
+      "The client asked me and my team to make a quiz application like Kahoot.",
+    solution:
+      "A quiz application that allows users to create and take quizzes, with features like multiple choice questions, timers, and score tracking.",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    projectUrl: "https://101356.stu.sd-lab.nl/quizzie/index.html",
   },
   // ... other projects
 ];
