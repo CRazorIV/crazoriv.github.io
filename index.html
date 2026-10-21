@@ -1,36 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yuri Kuvalja - Portfolio</title>
-    <!-- Start Single Page Apps for GitHub Pages -->
-    <script type="text/javascript">
-      // Single Page Apps for GitHub Pages
-      // MIT License
-      // https://github.com/rafgraph/spa-github-pages
-      (function (l) {
-        if (l.search[1] === "/") {
-          var decoded = l.search
-            .slice(1)
-            .split("&")
-            .map(function (s) {
-              return s.replace(/~and~/g, "&");
-            })
-            .join("?");
-          window.history.replaceState(
-            null,
-            null,
-            l.pathname.slice(0, -1) + decoded + l.hash
-          );
-        }
-      })(window.location);
-    </script>
-    <!-- End Single Page Apps for GitHub Pages -->
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuri Kuvalja</title>
+    <meta name="description"
+        content="Portfolio of Yuri Kuvalja, a 19 year old full-stack developer and BSc Computer Science student with 3+ years of experience. Explore projects, work experience and education. Interested in computer networking.">
+    <meta name="author" content="Yuri Kuvalja">
+    <meta name="keywords"
+        content="Yuri Kuvalja, full-stack developer, portfolio, computer science student, web developer, computer networking, projects">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#000000">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Yuri Kuvalja">
+    <meta property="og:description"
+        content="Full-stack developer and BSc Computer Science student with 3+ years of experience. Projects, work experience and education.">
+    <meta property="og:image" content="public/me.png">
+    <meta property="og:image:alt" content="Yuri Kuvalja">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Yuri Kuvalja">
+    <meta name="twitter:description"
+        content="Full-stack developer and BSc Computer Science student with 3+ years of experience.">
+    <link rel="icon" href="public/icons/yk_portfolio_icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="scripts/home.js" defer></script>
+</head>
+
+<body>
+    <section id="projects">
+        <h2><a href="html/ovatic.html">Projects</a></h2>
+        <p>A list of some of my projects I'm building or built.</p>
+    </section>
+    <section id="work-experience">
+        <h2><a href="html/work-experience.html">Work Experience</a></h2>
+        <p>A list of my work experience.</p>
+    </section>
+    <section id="education">
+        <h2><a href="html/education.html">Education</a></h2>
+        <p>A list of my educational achievements.</p>
+    </section>
+    <section id="about-me">
+        <h2><a href="html/aboutme.html">Me</a></h2>
+        <p>Little bit about myself :D I'm a full-stack developer and BSc Computer Science student who loves coding,
+            experimenting with new ideas and exploring computer networking.</p>
+    </section>
+    <footer>
+        <p>&copy; 2026 Yuri Kuvalja. | <a href="mailto:yuri.kuvalja@gmail.com">yuri.kuvalja@gmail.com</a> | <a
+                href="https://github.com/CRazorIV" target="_blank">Github</a> | <a
+                href="https://www.linkedin.com/in/yuri-kuvalja-25595330b/" target="_blank">Linkedin</a></p>
+    </footer>
+</body>
+
 </html>

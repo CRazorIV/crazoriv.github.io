@@ -1,14 +1,3 @@
-# Portfolio Website
+Altough it does not have a fancy contact me form and any other CV download buttons to exploit. I think this portfolio brings out my creative side much more compared to the vibecoded portfolio I used to have :D
 
-A modern, responsive portfolio website built with React and Vite.
-
-## Project Structure
-
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+I created this portfolio entirely using vanilla html, css and javascript. 

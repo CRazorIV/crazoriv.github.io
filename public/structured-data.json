@@ -1,0 +1,13 @@
+{
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Yuri Kuvalja",
+    "jobTitle": "Full-Stack Developer",
+    "description": "Full-stack developer and BSc Computer Science student with 3+ years of experience, interested in computer networking.",
+    "email": "mailto:yuri.kuvalja@gmail.com",
+    "image": "public/me.png",
+    "sameAs": [
+        "https://github.com/CRazorIV",
+        "https://www.linkedin.com/in/yuri-kuvalja-25595330b/"
+    ]
+}
